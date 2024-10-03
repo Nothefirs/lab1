@@ -1,14 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Route; // Імпортуємо клас Route
-use App\Http\Controllers\LabController; // Імпортуємо ваш контролер LabController
-use App\Http\Middleware\CheckAge; // Імпорт класу CheckAge
-use App\Http\Middleware\CheckName; // Імпорт класу CheckAge
+use Illuminate\Support\Facades\Route; 
+use App\Http\Controllers\LabController; 
+use App\Http\Middleware\CheckAge; 
+use App\Http\Middleware\CheckName; 
 
 // Визначаємо маршрути (роути)
 Route::get('/', [LabController::class, 'index']); // Коли запит на кореневу URL, викликається метод index контролера LabController
 Route::get('/about', [LabController::class, 'about'])->middleware(CheckAge::class);
-Route::get('/contact', [LabController::class, 'contact']); // Коли запит на /contact, викликається метод contact контролера LabController
+Route::get('/contact', [LabController::class, 'contact']); 
 Route::get('/hobbies', [LabController::class, 'hobbies'])->middleware(CheckName::class);
 
 
