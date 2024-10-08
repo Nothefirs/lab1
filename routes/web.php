@@ -16,3 +16,4 @@ Route::get('/hobbies', [LabController::class, 'hobbies'])->middleware(CheckName:
 //  http://localhost/about?age=20
 //  http://localhost/contact
 //  http://localhost/hobbies?name=Даня
+//
